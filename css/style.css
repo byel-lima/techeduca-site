@@ -1,0 +1,110 @@
+/* CONFIGURAÇÕES GERAIS*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(24, 24, 24);
+    background-color: white;
+}
+
+h1, h2, h3 {
+    color:blue;
+    text-align: center;
+}
+
+p {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* CABEÇALHO E MENU */
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: orange
+}
+
+/* ACESSANDO TAG.CLASS*/
+
+nav.menu {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav.menu a:houver {
+    color: orange
+}
+
+/* SEÇÃO PRINCIPAL (index.html) */
+
+.hero {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: darkblue;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.btn-primario {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-secundario {
+    background-color: white;
+    color: blue;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: blue, 2px, solid;
+}
+
+.btn-primario:houver, .btn-secundario:houver {
+    opacity: 0.8;
+}
+
+/* RODAPÉ */
+
+footer{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer a{
+    color: orange;
+    text-decoration: none;
+}
