@@ -1,110 +1,131 @@
-/* CONFIGURAÇÕES GERAIS*/
+/* === CONFIGURAÇÕES GERAIS === */
 
-body {
+body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
-    color: rgb(24, 24, 24);
-    background-color: white;
-}
-
-h1, h2, h3 {
-    color:blue;
+    color: #222;    
+    background-color: #ffff;
     text-align: center;
 }
 
-p {
-    line-height: 1.5;
-    margin: 10px 0;
-}
-
-/* CABEÇALHO E MENU */
-
-header {
-    background-color: blue;
-    color: white;
-    padding: 20px 0;
-}
-
-.logo a {
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: orange
-}
-
-/* ACESSANDO TAG.CLASS*/
-
-nav.menu {
+h1,h2,h3{
+    color: #1a4db3;
     text-align: center;
-    margin-top: 10px;
 }
 
-nav.menu a {
-    color: white;
+p{
+    line-height: 1.5; /** Altura da linha paragrafo**/
+    margin: 10px 0; /** Margin em cima e embaixo**/
+    text-align: center;
+}
+
+/* ===== CABECALHO E MENU =====*/
+header{
+    background-color: #1a4db3;
+    color:#ffff;
+    padding: 20px 0; /* Tamanho onde ela vai preencher */
+}
+.topo{
+    display: flex; /* ativa o flebox*/
+    align-content: center; /* espaco entre eles*/
+    padding: 10px; /* todos ocupam o mesmo tempo*/
+    justify-items: space-between; /* espaco inteiro*/
+
+}
+
+.logo a{
+    text-decoration: none; /* Tira o sublinhado do link*/
+    color: #ffff;
+    font-size: 24px; /* Tamanho da Fonte*/
+    font-weight: bold; /* Espessura da fonte*/
+}
+
+.logo span{
+    color: #ff6a00;
+}
+
+/* Acessando TAG.CLASS */
+nav.menu{
+    text-align: center; /* Colocar o texto no centro */
+    margin-top: 10px; /* Mangin no topo*/
+}
+
+nav.menu a{
+    color: #ffff;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
 }
 
-nav.menu a:houver {
-    color: orange
+nav.menu a:hover {
+    color: #ff6a00; /* Efeito passar mouse em cima */ 
 }
 
-/* SEÇÃO PRINCIPAL (index.html) */
-
-.hero {
-    background-color: whitesmoke;
+/* ==== SEÇÃO PRINCIPAL(index.html) ====*/
+.hero{
+    background-color: #f5f5f5;
     text-align: center;
     padding: 60px 20px;
 }
 
-.hero h1 {
+.hero h1{
     font-size: 36px;
-    color: darkblue;
+    color: #1a4db3;
 }
 
-.hero p {
+.hero p{
     font-size: 18px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 
-.btn-primario {
-    background-color: orange;
-    color: white;
+/* Criando botoes com hiperlinks */
+.btn-primario{
+    background-color:  #ff6a00;
+    color: #ffff;
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
 }
 
-.btn-secundario {
-    background-color: white;
-    color: blue;
+.btn-secundario{
+    background-color: #ffff;
+    color: #1a4db3;
     padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
-    border: blue, 2px, solid;
+    border: #1a4db3 2px solid;
 }
 
-.btn-primario:houver, .btn-secundario:houver {
-    opacity: 0.8;
+.btn-primario,.btn-secundario:hover{
+    opacity:  0.8;
 }
 
-/* RODAPÉ */
-
+/*==== RODAPÉ ====*/
 footer{
-    background-color: blue;
-    color: white;
+    background-color: #1a4db3;
+    color: #ffff;
     text-align: center;
     padding: 20px;
     font-size: 14px;
 }
 
 footer a{
-    color: orange;
+    color: #ff6a00;
     text-decoration: none;
+}
+
+article.cursos{
+    text-align: center;
+}
+
+/* Pagina Cursos */
+.cursos {
+ gap: 20px; /* Da espaco entre os cards*/
+ display: flex; /* Ativa o flebox*/
+}
+.curso {
+    flex: 1; /* Todos ocupam o mesmo espaco*/
+    padding: 20px; /* espaco interno*/
+    background: #ffff;
+    border-radius: 8px;
 }
