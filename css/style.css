@@ -8,6 +8,10 @@ body{
     text-align: center;
 }
 
+body, html {
+    height: 100%;
+}
+
 h1,h2,h3{
     color: #1a4db3;
     text-align: center;
@@ -29,8 +33,12 @@ header{
     display: flex; /* ativa o flebox*/
     align-content: center; /* espaco entre eles*/
     padding: 10px; /* todos ocupam o mesmo tempo*/
-    justify-items: space-between; /* espaco inteiro*/
+    justify-content: space-between; /* espaco inteiro*/
+}
 
+.menu {
+    display: flex;
+    gap: 15px;
 }
 
 .logo a{
@@ -55,6 +63,11 @@ nav.menu a{
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+}
+
+nav.menu a.ativo{
+    color: darkorange;
+    text-decoration: underline;
 }
 
 nav.menu a:hover {
@@ -100,6 +113,30 @@ nav.menu a:hover {
     opacity:  0.8;
 }
 
+
+article.cursos{
+    text-align: center;
+}
+
+/* Pagina Cursos */
+.cursos {
+    gap: 30px 20px; /* Da espaco entre os cards*/
+    text-align: center;
+    display: flex; /* Ativa o flebox*/
+}
+
+.curso {
+    flex: 1; /* Todos ocupam o mesmo espaco*/
+    padding: 20px; /* espaco interno*/
+    background: #ffff;
+    border-radius: 8px;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr))
+}
+
 /*==== RODAPÉ ====*/
 footer{
     background-color: #1a4db3;
@@ -112,20 +149,4 @@ footer{
 footer a{
     color: #ff6a00;
     text-decoration: none;
-}
-
-article.cursos{
-    text-align: center;
-}
-
-/* Pagina Cursos */
-.cursos {
- gap: 20px; /* Da espaco entre os cards*/
- display: flex; /* Ativa o flebox*/
-}
-.curso {
-    flex: 1; /* Todos ocupam o mesmo espaco*/
-    padding: 20px; /* espaco interno*/
-    background: #ffff;
-    border-radius: 8px;
 }
