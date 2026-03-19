@@ -1,0 +1,25 @@
+[
+
+{
+    "titulo":"Desenvolvimento WEB",
+    "img":"../img/desweb.jpg",
+    "descricao":"Aprenda HTML, CSS, Javascript e práticas modernas de desenvolvimento",
+    "url":"../pages/cursosdes-web.html",
+    "ch": 40
+},
+{
+    "titulo":"Informática básica",
+    "img":"../img/info.jpg",
+    "descricao":"Domine o uso do computador e aplicativos essencias",
+    "url":"../pages/cursosinfo-bas.html",
+    "ch": 30
+},
+{
+    "titulo":"Desenvolvimento de Games",
+    "img":"../img/desgame.webp",
+    "descricao":"Aprenda a desenvolver jogos de maneira criativa e interessante.",
+    "url":"../pages/cursosdes-jog.html",
+    "ch": 80
+}
+
+]
