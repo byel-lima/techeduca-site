@@ -1,0 +1,83 @@
+/*
+    ÁREA GERAL DA PÁGINA DE AUTENTICAÇÃO
+*/
+
+/* Espaçamento interno */
+.pagina-auth {
+    padding: 40px 20px;
+}
+
+.bloco-auth{
+    max-width: 500px; /* largura máxima da caixa*/
+    margin: 0 auto; /* centraliza automaticamente */
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.bloco-auth h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text-auth{
+    text-align: center;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+/*
+    FORMULÁRIO
+*/
+
+.form-auth{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-auth label{
+    font-weight: bold;
+}
+
+.form-auth input{
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-auth input:focus{
+    outline: none;
+    border-color: blue;
+}
+
+.mensagem-auth{
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+    min-height: 20px;
+}
+
+.link-auth{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.link-auth a{
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-auth a:houver{
+    color: orange;
+}
+
+.btn-login-menu{
+    background-color: coral;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+}

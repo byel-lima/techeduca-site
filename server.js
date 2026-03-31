@@ -10,7 +10,7 @@ const express = require("express");
 const cors = require("cors");
 
 // 3. Cria o servidor (como ligar um pc por ex)
-const app = express()
+const app = express();
 
 // 4. Front-end e Back-end se comunicam através do cors
 app.use(cors());
@@ -26,9 +26,16 @@ app.use(express.json());
 // 6. Define a rota POST "/mensagem"
 // Quando o formulário enviar os dados para /mensagem, essa função
 app.post("/mensagem", (req, res) => {
-    // 7. Req.body, contém os dados enviados pelo formulário
-    console.log (req.body); // mostra os dados no terminal
+  
+  // 7. Req.body, contém os dados enviados pelo formulário
+  console.log (req.body); // mostra os dados no terminal
 
-    //8. envia uma mensagem de volta para o navegador
-    res.send("Mensagem recebida com sucesso!");
-})
+  //8. envia uma mensagem de volta para o navegador
+  res.send("Mensagem recebida com sucesso!")
+});
+
+// 9. Inicia o servidor porta :3000
+// Depois, o servidor espera por novas mensagem
+app.listen(3000, () => {
+  console.log("Servidor rodando em http://localhost:3000");
+});0

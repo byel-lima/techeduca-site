@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <!-- Cabeça do Site-->
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <meta name="description" content="A TechEduca oferece cursos de tecnologia e informática." >
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/auth.css">
+        <title>Tech Educa - Formação em Tecnologia</title>
+    </head>
+
+    <!-- Corpo do Site -->
+    <body>
+        <header class="topo"> <!-- Cabeçalho do Site -->
+            <div class="logo">
+                <a href="../index.html">Tech<span>Educa</span></a>
+            </div>
+            <nav class="menu">
+                <a href="../index.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </header>
+
+        <main class="container-auth">
+            <section class="bloco-auth">
+                <h1>Login</h1>
+                <p class="text-auth">Faça login para ter acesso aos recursos</p>
+                <form class="form-auth" id="formLogin">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+
+                    <label for="">Senha:</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+                    <button type="submit" class="btn-primario">Fazer Login</button>
+
+                    <p id="mensagemLogin" class="mensagem-auth"></p>
+
+                </form>
+
+                <p class="link-auth">Não possui conta? <a href="cadastro.html">Faça seu cadastro.</a></p>
+            </section>
+            
+        </main>
+
+        <footer class="rodape">
+            <p>® 2026 TechEduca. Todos os Direitos Reservados</p>
+            <p><a href="pages/contato.html">Entre em Contato</a></p>
+        </footer>
+
+    <script src="../js/auth.js"></script>
+    </body>
+</html>

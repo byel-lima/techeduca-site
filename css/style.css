@@ -54,6 +54,32 @@ header{
     color: #ff6a00;
 }
 
+@media (max-width: 768px) {
+ 
+    .topo {
+      flex-direction: column; /* coloca logo e menu em coluna */
+      align-items: center;    /* centraliza tudo */
+    }
+   
+    .menu {
+      flex-direction: column; /* links um embaixo do outro */
+      gap: 10px;              /* espaço entre os links */
+      margin-top: 10px;
+    }
+   
+    .menu a {
+      display: block;         /* cada link vira um bloco clicável */
+    }
+   
+    .curso{
+      max-width: 600 px; /*limite de largura*/
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8 px;
+    }
+}
+
 /* Acessando TAG.CLASS */
 nav.menu{
     text-align: center; /* Colocar o texto no centro */
@@ -74,6 +100,21 @@ nav.menu a.ativo{
 
 nav.menu a:hover {
     color: #ff6a00; /* Efeito passar mouse em cima */ 
+}
+
+@media (max-width: 450px){
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    form {
+        padding: 0 10px;
+    }
 }
 
 /* ==== SEÇÃO PRINCIPAL(index.html) ====*/
