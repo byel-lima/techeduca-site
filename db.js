@@ -1,7 +1,7 @@
 require("dotenv").config();
 const mysql = require("mysql2/promise");
 
-const poll = mysql.createPool({ //cria um grupo de conexões
+const pool = mysql.createPool({ //cria um grupo de conexões
     host: process.env.DB_HOST, //process => lê as credênciais .env
     port: process.env.DB_PORT,
     user: process.env.DB_USER,

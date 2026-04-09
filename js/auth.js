@@ -42,6 +42,16 @@ if(formCadastro){
             //lê a mensagem da maneira correta
             const dados = resposta.JSON();
 
+            if(!resposta.ok){
+                //mensagem do <p> no html
+                mensagem.textContent = dados.mensagem || dados.error
+                return
+            }
+
+            if(resposta.ok){
+                window.location.href = "../pages/cursos.html"
+            }
+
             //exibe a mensagem de erro ou acesso
             mensagemCadastro.textContent = dados.mensagemCadastro || dados.error;
 
@@ -49,8 +59,9 @@ if(formCadastro){
             formCadastro.reset();
         }
 
-        catch{
+        catch(error){
             //servidor offline ou inacessível
+            console.error(error);
             mensagemCadastro.textContent = "Error ao se conectar com o servidor"
         }
     });
@@ -84,17 +95,22 @@ if(formLogin){
             //lê a mensagem da maneira correta
             const dados = resposta.JSON();
 
+            //mensagem do <p> no html
+            mensagem.textContent = dados.mensagem || dados.error
+
             //exibe a mensagem de erro ou acesso
             mensagemLogin.textContent = dados.mensagemLogin || dados.error;
 
             //sucesso -> redireciona para os cursos
             if(resposta.ok){
                 window.location.href = "../pages/cursos.html"
+                return
           }
         }
 
-        catch{
+        catch(error){
             //servidor offline ou inacessível
+            console.error(error);
             mensagemLogin.textContent = "Error ao se conectar com o servidor"
         }
     });
