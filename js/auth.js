@@ -40,11 +40,11 @@ if(formCadastro){
             });
 
             //lê a mensagem da maneira correta
-            const dados = resposta.JSON();
+            const dados = await resposta.json();
 
             if(!resposta.ok){
                 //mensagem do <p> no html
-                mensagem.textContent = dados.mensagem || dados.error
+                mensagemCadastro.textContent = dados.mensagem || dados.error
                 return
             }
 
@@ -93,10 +93,10 @@ if(formLogin){
             });
 
             //lê a mensagem da maneira correta
-            const dados = resposta.JSON();
+            const dados = await resposta.json();
 
             //mensagem do <p> no html
-            mensagem.textContent = dados.mensagem || dados.error
+            mensagemLogin.textContent = dados.mensagem || dados.error
 
             //exibe a mensagem de erro ou acesso
             mensagemLogin.textContent = dados.mensagemLogin || dados.error;

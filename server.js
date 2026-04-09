@@ -113,8 +113,8 @@ app.post("/cadastro", async (req, res) => {
 
     res.status(201).json({ sucesso: "Cadastro realizado com sucesso!" });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Erro ao cadastrar usuário!" });
+      console.error(error);
+      res.status(500).json({ error: "Erro ao cadastrar usuário!" });
   }
 });
 
