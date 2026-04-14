@@ -28,7 +28,7 @@ const app = express();
 const listOrigins = [
   "http://localhost:3000", //ambientação local (live server)
   "http://127.0.0.1:5500", //variação de localhost
-  "http://user.github.io" // domínio do frontend em produção
+  "https://techeduca-site.onrender.com" // domínio do frontend em produção
 ];
 
 // 8. Front-end e Back-end se comunicam através do cors

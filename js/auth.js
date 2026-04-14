@@ -2,7 +2,7 @@ const formCadastro = document.getElementById("formCadastro"); //pega o id coloca
 const formLogin = document.getElementById("formLogin"); //mesma coisa
 
 //url da api local
-const API_URL = "http://localhost:3000";
+const API_URL = "https://techeduca-site.onrender.com";
 // const API_URL = "url_render";
 
 if(formCadastro){
