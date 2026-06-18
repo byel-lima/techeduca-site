@@ -26,9 +26,10 @@ const app = express();
 
 // 7. Cria uma lista de instância de conexões
 const listOrigins = [
+  "http://localhost:8081", //ambientação local (react native)
   "http://localhost:3000", //ambientação local (live server)
   "http://127.0.0.1:5500", //variação de localhost
-  "https://techeduca-site.onrender.com" // domínio do frontend em produção
+  "https://techeduca.onrender.com" // domínio do frontend em produção
 ];
 
 // 8. Front-end e Back-end se comunicam através do cors
