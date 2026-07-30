@@ -10,6 +10,7 @@
 .bloco-auth{
     max-width: 500px; /* largura máxima da caixa*/
     margin: 0 auto; /* centraliza automaticamente */
+    margin-top: 60px;
     background-color: white;
     padding: 30px;
     border-radius: 8px;
@@ -38,6 +39,7 @@
 }
 
 .form-auth label{
+    text-align: left;
     font-weight: bold;
 }
 

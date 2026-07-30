@@ -4,6 +4,11 @@
 */
 const form = document.getElementById("formContato");
 //Document enxerga os coiso do html
+
+//url da api local
+const API_URL = "http://localhost:3000";
+// const API_URL = "url_render";
+// const API_URL = "https://techeduca-site.onrender.com";
  
 /*============================================================
     2) Fica "ouvindo" o momento que o usuario clica no botao enviar /TRATAR E ENVIAR OS DADOS PARA O SERVIDOR
@@ -24,7 +29,7 @@ form.addEventListener("submit", async function(event){
  
     try{
     // 6). envia os dados para o servidor usando fetch()
-     const resposta = await fetch("http://localhost:3000/mensagem",{
+     const resposta = await fetch(`${API_URL}/cadastro`,{
         "method": "POST", // POST = estamos enviando os dados
         "headers": {
             "Content-Type": "aplication/json" //avisa que o formato e JSON

@@ -1,25 +1,40 @@
 [
 
 {
-    "titulo":"Desenvolvimento WEB",
-    "img":"../img/desweb.jpg",
-    "descricao":"Aprenda HTML, CSS, Javascript e práticas modernas de desenvolvimento",
-    "url":"../pages/cursosdes-web.html",
-    "ch": 40
+    "id": "1",
+    "titulo": "Desenvolvimento WEB",
+    "img": "../img/desweb.jpg", 
+    "descricao": "Aprenda HTML, CSS, Javascript e práticas modernas de desenvolvimento",
+    "ch": 40,
+    "objetivo": "Desenvolver páginas web modernas, responsivas e organizadas.",
+    "publico": "Indicado para estudantes iniciantes que desejam aprender desenvolvimento web.",
+    "conteudo": "HTML, CSS, JavaScript, responsividade, organização de arquivos e boas práticas.",
+    "modalidade": "Presencial com práticas em laboratório.",
+    "nivel": "Iniciante"
 },
 {
-    "titulo":"Informática básica",
-    "img":"../img/info.jpg",
-    "descricao":"Domine o uso do computador e aplicativos essencias",
-    "url":"../pages/cursosinfo-bas.html",
-    "ch": 30
+    "id": "2",
+    "titulo": "Informática Básica",
+    "img": "../img/info.jpg",
+    "descricao": "Domine o uso do computador e aplicativos essenciais",
+    "ch": 30,
+    "objetivo": "Capacitar o aluno para utilizar o computador de forma segura, produtiva e organizada.",
+    "publico": "Indicado para quem deseja desenvolver conhecimentos básicos em informática.",
+    "conteudo": "Windows, internet, e-mail, organização de arquivos, Word, Excel e PowerPoint básico.",
+    "modalidade": "Presencial",
+    "nivel": "Básico"
 },
 {
-    "titulo":"Desenvolvimento de Games",
-    "img":"../img/desgame.webp",
-    "descricao":"Aprenda a desenvolver jogos de maneira criativa e interessante.",
-    "url":"../pages/cursosdes-jog.html",
-    "ch": 80
+    "id": "3",
+    "titulo": "Desenvolvimento de Games",
+    "img": "../img/desgame.webp",
+    "descricao": "Aprenda a desenvolver games de forma legal e criativa",
+    "ch": 80,
+    "objetivo": "Introduzir conceitos de criação de jogos, lógica de programação e desenvolvimento interativo.",
+    "publico": "Indicado para estudantes interessados em games, programação e criatividade digital.",
+    "conteudo": "Lógica de jogos, personagens, cenários, interatividade, mecânicas básicas e publicação de protótipos.",
+    "modalidade": "Presencial com atividades práticas",
+    "nivel": "Intermediário"
 }
 
 ]

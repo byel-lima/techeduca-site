@@ -21,7 +21,7 @@ async function carregarCursos(){
     console.log(resposta);
 
     //TRANSFORMA O JSON EM DADOS QUE O JS ENTENDE
-    const cursos = await resposta.json;
+    const cursos = await resposta.json();
 
     //depois de caregar, já renderiza na tela
     renderizarCursos(cursos);
@@ -38,14 +38,14 @@ function renderizarCursos(lista){
     //para cada card 'curso' da lista, cria um card
     lista.forEach(curso => {
       const card = document.createElement("div");
-      card.classList.add("card-curso");
+      card.classList.add("card", "curso");
       card.innerHTML = 
       `
         <h3> ${curso.titulo} </h3>
         <img src ="${curso.img} width="50" height="50"">
         <p> ${curso.descricao} </p>
         <p> <strong>CH: </strong> ${curso.ch}</p>
-        <a href="${curso.url}"<button>Ver detalhes</button></a>
+        <a href="detalhes-curso.html?id=${curso.id}"<button>Ver detalhes</button></a>
       `;
       ListaCursos.appendChild(card);      
     });

@@ -10,8 +10,8 @@
 
     <body>
         <script>
-            //envia o cookie junto com a requisição
-            fetch("http://localhost:3000/me", {credentials: "include" })
+            // envia o cookie junto com a requisição
+            fetch(`${API_URL}/me`, {credentials: "include" })
             .then(resposta => {
                 if(!resposta.ok){
                     alert("Você precisa fazer o login para ter acesso total"); 
