@@ -2,8 +2,10 @@
     1) PEGAR OS ELEMENTOS DO HTML
   ============================================================
 */
+//ONDE OS CARDS VAO APARECER
 const ListaCursos = document.querySelector("#ListaCursos");
-const buscaCursos = document.querySelector("#BuscarCursos")
+//CAMPO DE BUSCA
+const buscaCursos = document.querySelector("#BuscarCursos");
 
 /*============================================================
     2)CRIAR UMA LISTA PARA GUARDAR OS CURSOS
@@ -15,41 +17,68 @@ let cursos = [];
     3) FUNÇÃO PARA CARREGAR O JSON
   ============================================================
 */
+
 async function carregarCursos(){
     //BUSCA O ARQUIVO cursos.json
-    const resposta = await fetch("../data/cursos.json");
+    const resposta = await fetch("../data/cursos.json"); 
     console.log(resposta);
 
-    //TRANSFORMA O JSON EM DADOS QUE O JS ENTENDE
-    const cursos = await resposta.json();
+    //transforma o JSON em dados que o js entende
+    cursos = await resposta.json();
 
     //depois de caregar, já renderiza na tela
     renderizarCursos(cursos);
 };
 
 /*============================================================
-    4) FUNÇÃO PARA CRIAR OS CARDS NA TELA
+    4) FUNÇÃO PARA CRIAR OS CARD DOS CURSOS NA TELA
   ============================================================
 */
 function renderizarCursos(lista){
-    //limpa o conteúdo da tela antes de desenhar de novo
+    // limpa o conteúdo antes de desenhar de novo
     ListaCursos.innerHTML = "";
 
-    //para cada card 'curso' da lista, cria um card
+    // para cada curso da lista -> cria um card
     lista.forEach(curso => {
-      const card = document.createElement("div");
-      card.classList.add("card", "curso");
-      card.innerHTML = 
-      `
-        <h3> ${curso.titulo} </h3>
-        <img src ="${curso.img} width="50" height="50"">
-        <p> ${curso.descricao} </p>
-        <p> <strong>CH: </strong> ${curso.ch}</p>
-        <a href="detalhes-curso.html?id=${curso.id}"<button>Ver detalhes</button></a>
-      `;
-      ListaCursos.appendChild(card);      
+        // cria a tag div
+        const card = document.createElement("div");
+
+        // coloca uma class dentro da tag criada
+        card.classList.add("card","curso");
+
+        //coloca o conteúdo dentro do card
+        card.innerHTML = `
+            <h3> ${curso.titulo} </h3>
+            <img src="${curso.img}" width="150" height="150">
+            <p> ${curso.descricao} </p>
+            <p> <strong>CH: </strong> ${curso.ch}</p>
+            <a href="detalhes-curso.html?id=${curso.id}"><button class="btn_curso">Ver detalhes</button></a>
+        `;
+        ListaCursos.appendChild(card);
     });
 }
+
+/*============================================================
+    5) FUNÇÃO PARA BUSCA DE CURSO
+  ============================================================
+*/
+// Chamar uma função que captura a ação do usuário e dispara um evento
+buscaCursos.addEventListener("input", function(){
+  // Pega o valor digitado
+  const texto = buscaCursos.value.toLowerCase(); // pega o valor digitado no input e deixa tudo minúsculo
+
+  const filtrados = cursos.filter((curso) => 
+    // Para cada CURSO:
+  // curso.titulo -> acesso título (chave JSON)
+  // toLowerCase() -> padroniza comparação
+  // includes(texto) -> verifica se o texto digitado está dentro do título
+  // retorna true (entra no filtro) ou false (e ignorado)
+    curso.titulo.toLowerCase().includes(texto)
+  );
+
+// Reenderizar a tla com novalista filtrada
+renderizarCursos(filtrados);
+});
 
 /*============================================================
     6) INICIA TUDO

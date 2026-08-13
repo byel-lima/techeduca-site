@@ -25,6 +25,22 @@ if(formCadastro){
             return
         };
 
+        // Verifica se a string possui qualquer número (0 a 9)
+        if (/\d/.test(nome)) {
+            mensagemCadastro.textContent = "O campo nome não deve conter números!";
+            return;
+        }
+
+        if(senha.legth < 8){
+            mensagemCadastro.textContent = "A senha deve ter no minimo 8 caracteres!";
+            return;
+        }
+
+        if(senha.legth > 20){
+            mensagemCadastro.textContent = "A senha estao grande demanis"
+            return;
+        }
+
         //campo diferente = interromper
 
         if(senha !== confSenha){
@@ -83,6 +99,16 @@ if(formLogin){
             mensagemLogin.textContent = "Preencha todos os campos corretamente!";
             return
         };
+
+        if(senha.legth < 8){
+            mensagemLogin.textContent = "A senha deve ter no minimo 8 caracteres!";
+            return;
+        }
+
+        if(senha.legth > 20){
+            mensagemLogin.textContent = "A senha estao grande demanis"
+            return;
+        }
 
         //envio para o backend e resposta para o frontend
         try{

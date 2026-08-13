@@ -37,7 +37,6 @@ async function carregarDetalhesCurso(){
     }
 }
 
-
 function mostrarCurso(curso){
     mensagemCarregamento.textContent = "";
 
@@ -45,12 +44,38 @@ function mostrarCurso(curso){
         <h3> ${curso.titulo} </h3>
         <img src="${curso.img}" width="150" height="150">
         <p> ${curso.descricao} </p>
-        <p> <strong>CH: </strong> ${curso.ch}</p>
-        <p> <strong>Nivel: </strong> ${curso.nivel}</p>
-        <p> <strong>Modalidade: </strong> ${curso.modalidade}</p>
-        <p> <strong>Objetivo: </strong> ${curso.objetivo}</p>
-        <p> <strong>Público: </strong> ${curso.publico}</p>
-        <p> <strong>Conteúdo: </strong> ${curso.conteudo}</p>    
+
+        <div class="infoBox">
+            <p> <strong>CH: </strong> </p>
+            <p> ${curso.ch} </p>
+        </div>
+
+        <div class="infoBox">
+            <p> <strong>Nivel: </strong> </p>
+            <p> ${curso.nivel} </p>
+        </div>
+
+        <div class="secaoDetalhe"> 
+            <p class="infoLabel"> <strong>Modalidade: </strong> </p> 
+            <p class="infoValor"> ${curso.modalidade} </p>
+        </div>
+
+        <div class="secaoDetalhe"> 
+            <p class="infoLabel"> <strong>Objetivo: </strong> </p> 
+            <p class="infoValor"> ${curso.objetivo} </p> 
+        </div>
+
+        <div class="secaoDetalhe"> 
+            <p class="infoLabel"> <strong>Público: </strong> </p>
+            <p class="infoValor"> ${curso.publico} </p>
+        </div>
+
+        <div class="secaoDetalhe"> 
+            <p class="infoLabel"> <strong>Conteúdo: </strong> </p>
+            <p class="infoValor"> ${curso.conteudo} </p>
+        </div>
+
+        <button href="../pages/cursos> Voltar para cursos </button>
     `;
 }
 

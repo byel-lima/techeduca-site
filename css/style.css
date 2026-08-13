@@ -201,6 +201,60 @@ article.cursos{
     margin-bottom: 10px;
 }
 
+/*=== DETELHE CURSOS ===*/
+.detalhe-curso{
+    padding-top: 40px;
+    padding-bottom: 40px;
+};
+
+.detalhe-card{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.detalhe-imagem{
+    width: 300px;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.infoBox{
+    background-color: #f5f5f5;
+    padding: 15px;
+    width: 280px;
+    height: 160px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    gap: 12px;
+};
+
+.secaoDetalhe{
+    margin-bottom: 20px;
+};
+
+.infoLabel{
+    color: #1a4db3;
+    font-weight: bold;
+    font-size: 20;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.infoValor{
+    color: '#222';
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /*==== RODAPÉ ====*/
 footer{
     margin-top: auto;
